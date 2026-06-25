@@ -1,0 +1,201 @@
+openapi: 3.1.0
+info:
+  title: FullStackX Program Inquiry API
+  version: 1.0.0
+  description: Contract for retrieving program summary data and submitting learner inquiries.
+servers:
+  - url: https://example.org
+paths:
+  /api/program:
+    get:
+      summary: Fetch program offering content
+      operationId: getProgramOffering
+      responses:
+        "200":
+          description: Program content payload
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProgramOfferingResponse"
+  /api/inquiries:
+    post:
+      summary: Submit program inquiry or registration intent
+      operationId: createInquirySubmission
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InquirySubmissionRequest"
+      responses:
+        "201":
+          description: Inquiry accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InquirySubmissionAccepted"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "409":
+          description: Potential duplicate inquiry detected
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DuplicateResponse"
+components:
+  schemas:
+    ProgramOfferingResponse:
+      type: object
+      required:
+        - program
+        - curriculum
+        - outcomes
+        - tools
+        - contacts
+      properties:
+        program:
+          type: object
+          required:
+            [title, durationWeeks, handsOnRatioPercent, philosophy, overview]
+          properties:
+            title:
+              type: string
+            durationWeeks:
+              type: integer
+              minimum: 1
+            handsOnRatioPercent:
+              type: integer
+              minimum: 0
+              maximum: 100
+            philosophy:
+              type: string
+            overview:
+              type: string
+        curriculum:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            required: [weekNumber, moduleTitles, summary]
+            properties:
+              weekNumber:
+                type: integer
+                minimum: 1
+              moduleTitles:
+                type: array
+                minItems: 1
+                items:
+                  type: string
+              summary:
+                type: string
+        outcomes:
+          type: array
+          minItems: 1
+          items:
+            type: string
+        tools:
+          type: array
+          minItems: 1
+          items:
+            type: object
+            required: [toolName, category]
+            properties:
+              toolName:
+                type: string
+              category:
+                type: string
+                enum: [ai_coding, collaboration, database, deployment, workflow]
+        contacts:
+          type: array
+          minItems: 1
+          items:
+            $ref: "#/components/schemas/CoordinatorContact"
+
+    InquirySubmissionRequest:
+      type: object
+      required: [fullName, email, intentType, message, sourcePage]
+      properties:
+        fullName:
+          type: string
+          minLength: 2
+          maxLength: 120
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+          minLength: 7
+          maxLength: 20
+        intentType:
+          type: string
+          enum: [register_interest, ask_question]
+        message:
+          type: string
+          minLength: 10
+          maxLength: 2000
+        sourcePage:
+          type: string
+          minLength: 1
+
+    InquirySubmissionAccepted:
+      type: object
+      required: [inquiryId, status, submittedAt, message]
+      properties:
+        inquiryId:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [received]
+        submittedAt:
+          type: string
+          format: date-time
+        message:
+          type: string
+
+    DuplicateResponse:
+      type: object
+      required: [status, message]
+      properties:
+        status:
+          type: string
+          enum: [duplicate_flagged]
+        message:
+          type: string
+
+    ErrorResponse:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        fieldErrors:
+          type: array
+          items:
+            type: object
+            required: [field, issue]
+            properties:
+              field:
+                type: string
+              issue:
+                type: string
+
+    CoordinatorContact:
+      type: object
+      required: [name, roleTitle, phone, email]
+      properties:
+        name:
+          type: string
+        roleTitle:
+          type: string
+        phone:
+          type: string
+        email:
+          type: string
+          format: email

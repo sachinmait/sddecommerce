@@ -1,0 +1,53 @@
+{
+  "programResponse": {
+    "program": {
+      "title": "FullStackX: The 6-Week Accelerator",
+      "durationWeeks": 6,
+      "handsOnRatioPercent": 60,
+      "philosophy": "AI-First Software Engineering",
+      "overview": "An immersive six-week program for beginners to learn software development in an AI-enhanced workflow, from prompt-led creation to structured engineering and deployment."
+    },
+    "curriculum": [
+      {
+        "weekNumber": 1,
+        "moduleTitles": ["Git Workflows"],
+        "summary": "Branching, pull requests, code reviews, and collaborative version control fundamentals."
+      }
+    ],
+    "outcomes": [
+      "Apply an AI-first engineering mindset across ideation, coding, review, and deployment."
+    ],
+    "tools": [
+      {
+        "toolName": "GitHub Copilot",
+        "category": "ai_coding"
+      }
+    ],
+    "contacts": [
+      {
+        "name": "Dr. Bhoomi Gupta",
+        "roleTitle": "HoD - ITE",
+        "phone": "9990111970",
+        "email": "bhoomigupta@mait.ac.in"
+      }
+    ]
+  },
+  "inquiryRequest": {
+    "fullName": "Aditi Sharma",
+    "email": "aditi@example.com",
+    "phone": "9811000000",
+    "intentType": "register_interest",
+    "message": "I want to enroll in the upcoming FullStackX cohort.",
+    "sourcePage": "/"
+  },
+  "inquirySuccessResponse": {
+    "inquiryId": "2f7df6d3-1bde-4f6e-a0fa-4aa2784ec9c7",
+    "status": "received",
+    "submittedAt": "2026-06-24T14:30:00.000Z",
+    "message": "Inquiry received. Coordinators will contact you soon."
+  },
+  "inquiryDuplicateResponse": {
+    "status": "duplicate_flagged",
+    "message": "A similar inquiry was submitted recently. We will follow up shortly."
+  }
+}

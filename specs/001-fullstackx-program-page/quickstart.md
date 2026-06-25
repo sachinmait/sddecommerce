@@ -102,3 +102,10 @@ Expected outcome:
 ## Data Model Reference
 
 For entity rules and lifecycle behavior, see [data-model.md](./data-model.md).
+
+## Validation Run Notes (2026-06-24)
+
+- `npm run lint` completed successfully.
+- `npm run test:contract` passed (3 assertions).
+- `npm run test` passed (unit + integration suites).
+- `npm run test:e2e` passed after installing Playwright Chromium binary.

@@ -12,11 +12,11 @@
 
 **Purpose**: Initialize project skeleton and developer tooling.
 
-- [ ] T001 Create Next.js app skeleton and root route in app/page.tsx
-- [ ] T002 Initialize project scripts and dependencies in package.json
-- [ ] T003 [P] Configure TypeScript and path aliases in tsconfig.json
-- [ ] T004 [P] Configure linting/formatting rules in eslint.config.js
-- [ ] T005 [P] Add environment variable examples in .env.example
+- [X] T001 Create Next.js app skeleton and root route in app/page.tsx
+- [X] T002 Initialize project scripts and dependencies in package.json
+- [X] T003 [P] Configure TypeScript and path aliases in tsconfig.json
+- [X] T004 [P] Configure linting/formatting rules in eslint.config.js
+- [X] T005 [P] Add environment variable examples in .env.example
 
 ---
 
@@ -26,14 +26,14 @@
 
 **CRITICAL**: No user story implementation starts until this phase is complete.
 
-- [ ] T006 Create Supabase migration for inquiry table and indexes in supabase/migrations/001_create_inquiries.sql
-- [ ] T007 [P] Implement Supabase server client factory in lib/data/supabaseServer.ts
-- [ ] T008 [P] Define shared domain types for program entities in lib/content/types.ts
-- [ ] T009 [P] Implement shared Zod schemas for inquiry validation in lib/validation/inquirySchema.ts
-- [ ] T010 Implement API error/response helpers in lib/data/apiResponses.ts
-- [ ] T011 Implement duplicate signature helper in lib/validation/duplicateSignature.ts
-- [ ] T012 Add base API route wiring for inquiry endpoint in app/api/inquiries/route.ts
-- [ ] T013 Add base API route wiring for program endpoint in app/api/program/route.ts
+- [X] T006 Create Supabase migration for inquiry table and indexes in supabase/migrations/001_create_inquiries.sql
+- [X] T007 [P] Implement Supabase server client factory in lib/data/supabaseServer.ts
+- [X] T008 [P] Define shared domain types for program entities in lib/content/types.ts
+- [X] T009 [P] Implement shared Zod schemas for inquiry validation in lib/validation/inquirySchema.ts
+- [X] T010 Implement API error/response helpers in lib/data/apiResponses.ts
+- [X] T011 Implement duplicate signature helper in lib/validation/duplicateSignature.ts
+- [X] T012 Add base API route wiring for inquiry endpoint in app/api/inquiries/route.ts
+- [X] T013 Add base API route wiring for program endpoint in app/api/program/route.ts
 
 **Checkpoint**: Foundation complete; user stories can proceed in parallel.
 
@@ -47,20 +47,20 @@
 
 ### Tests for User Story 1
 
-- [ ] T014 [P] [US1] Add contract test for GET /api/program response schema in tests/contract/program-content.contract.test.ts
-- [ ] T015 [P] [US1] Add integration test for program discovery journey in tests/integration/program-discovery.integration.test.ts
+- [X] T014 [P] [US1] Add contract test for GET /api/program response schema in tests/contract/program-content.contract.test.ts
+- [X] T015 [P] [US1] Add integration test for program discovery journey in tests/integration/program-discovery.integration.test.ts
 
 ### Implementation for User Story 1
 
-- [ ] T016 [P] [US1] Add program overview and audience content dataset in lib/content/programOverview.ts
-- [ ] T017 [P] [US1] Add week-by-week curriculum dataset in lib/content/curriculumWeeks.ts
-- [ ] T018 [P] [US1] Add tool catalog dataset in lib/content/toolCatalog.ts
-- [ ] T019 [US1] Implement GET /api/program content assembly in app/api/program/route.ts
-- [ ] T020 [P] [US1] Build course overview section component in components/sections/CourseOverviewSection.tsx
-- [ ] T021 [P] [US1] Build target audience section component in components/sections/TargetAudienceSection.tsx
-- [ ] T022 [P] [US1] Build curriculum timeline component in components/curriculum/CurriculumTimeline.tsx
-- [ ] T023 [P] [US1] Build tools showcase component in components/sections/ToolsShowcaseSection.tsx
-- [ ] T024 [US1] Compose discovery page layout with US1 sections in app/page.tsx
+- [X] T016 [P] [US1] Add program overview and audience content dataset in lib/content/programOverview.ts
+- [X] T017 [P] [US1] Add week-by-week curriculum dataset in lib/content/curriculumWeeks.ts
+- [X] T018 [P] [US1] Add tool catalog dataset in lib/content/toolCatalog.ts
+- [X] T019 [US1] Implement GET /api/program content assembly in app/api/program/route.ts
+- [X] T020 [P] [US1] Build course overview section component in components/sections/CourseOverviewSection.tsx
+- [X] T021 [P] [US1] Build target audience section component in components/sections/TargetAudienceSection.tsx
+- [X] T022 [P] [US1] Build curriculum timeline component in components/curriculum/CurriculumTimeline.tsx
+- [X] T023 [P] [US1] Build tools showcase component in components/sections/ToolsShowcaseSection.tsx
+- [X] T024 [US1] Compose discovery page layout with US1 sections in app/page.tsx
 
 **Checkpoint**: US1 is independently functional and testable.
 
@@ -74,17 +74,17 @@
 
 ### Tests for User Story 2
 
-- [ ] T025 [P] [US2] Add integration test for outcomes evaluation flow in tests/integration/outcomes-evaluation.integration.test.ts
-- [ ] T026 [P] [US2] Add component test for outcomes and commitment rendering in tests/unit/outcomes-sections.unit.test.tsx
+- [X] T025 [P] [US2] Add integration test for outcomes evaluation flow in tests/integration/outcomes-evaluation.integration.test.ts
+- [X] T026 [P] [US2] Add component test for outcomes and commitment rendering in tests/unit/outcomes-sections.unit.test.tsx
 
 ### Implementation for User Story 2
 
-- [ ] T027 [P] [US2] Add learning outcomes dataset in lib/content/learningOutcomes.ts
-- [ ] T028 [P] [US2] Add workload and capstone context dataset in lib/content/commitmentContext.ts
-- [ ] T029 [P] [US2] Build learning outcomes section component in components/sections/LearningOutcomesSection.tsx
-- [ ] T030 [P] [US2] Build commitment context section component in components/sections/CommitmentContextSection.tsx
-- [ ] T031 [US2] Integrate outcomes and commitment sections into page composition in app/page.tsx
-- [ ] T032 [US2] Add analytics event hooks for outcomes engagement in lib/data/engagementEvents.ts
+- [X] T027 [P] [US2] Add learning outcomes dataset in lib/content/learningOutcomes.ts
+- [X] T028 [P] [US2] Add workload and capstone context dataset in lib/content/commitmentContext.ts
+- [X] T029 [P] [US2] Build learning outcomes section component in components/sections/LearningOutcomesSection.tsx
+- [X] T030 [P] [US2] Build commitment context section component in components/sections/CommitmentContextSection.tsx
+- [X] T031 [US2] Integrate outcomes and commitment sections into page composition in app/page.tsx
+- [X] T032 [US2] Add analytics event hooks for outcomes engagement in lib/data/engagementEvents.ts
 
 **Checkpoint**: US2 is independently functional and testable.
 
@@ -98,19 +98,19 @@
 
 ### Tests for User Story 3
 
-- [ ] T033 [P] [US3] Add contract test for POST /api/inquiries status codes and payloads in tests/contract/inquiry-submit.contract.test.ts
-- [ ] T034 [P] [US3] Add integration test for inquiry form validation and success path in tests/integration/inquiry-submission.integration.test.ts
-- [ ] T035 [P] [US3] Add integration test for duplicate inquiry handling in tests/integration/inquiry-duplicate.integration.test.ts
+- [X] T033 [P] [US3] Add contract test for POST /api/inquiries status codes and payloads in tests/contract/inquiry-submit.contract.test.ts
+- [X] T034 [P] [US3] Add integration test for inquiry form validation and success path in tests/integration/inquiry-submission.integration.test.ts
+- [X] T035 [P] [US3] Add integration test for duplicate inquiry handling in tests/integration/inquiry-duplicate.integration.test.ts
 
 ### Implementation for User Story 3
 
-- [ ] T036 [P] [US3] Add coordinator contacts dataset in lib/content/coordinatorContacts.ts
-- [ ] T037 [P] [US3] Build inquiry form component with client validation in components/forms/InquiryForm.tsx
-- [ ] T038 [P] [US3] Build coordinator contact section component in components/sections/CoordinatorContactSection.tsx
-- [ ] T039 [US3] Implement POST /api/inquiries validation and persistence in app/api/inquiries/route.ts
-- [ ] T040 [US3] Implement duplicate inquiry window check in app/api/inquiries/route.ts
-- [ ] T041 [US3] Add acknowledgement and error messaging states in components/forms/InquiryForm.tsx
-- [ ] T042 [US3] Integrate inquiry and contact sections into page composition in app/page.tsx
+- [X] T036 [P] [US3] Add coordinator contacts dataset in lib/content/coordinatorContacts.ts
+- [X] T037 [P] [US3] Build inquiry form component with client validation in components/forms/InquiryForm.tsx
+- [X] T038 [P] [US3] Build coordinator contact section component in components/sections/CoordinatorContactSection.tsx
+- [X] T039 [US3] Implement POST /api/inquiries validation and persistence in app/api/inquiries/route.ts
+- [X] T040 [US3] Implement duplicate inquiry window check in app/api/inquiries/route.ts
+- [X] T041 [US3] Add acknowledgement and error messaging states in components/forms/InquiryForm.tsx
+- [X] T042 [US3] Integrate inquiry and contact sections into page composition in app/page.tsx
 
 **Checkpoint**: US3 is independently functional and testable.
 
@@ -120,11 +120,11 @@
 
 **Purpose**: Improve quality across stories and finalize release readiness.
 
-- [ ] T043 [P] Add responsive behavior and accessibility refinements in app/page.tsx
-- [ ] T044 [P] Add final API contract fixture examples in tests/contract/fixtures/program-inquiry.examples.json
-- [ ] T045 Run quickstart scenario validation and update run notes in specs/001-fullstackx-program-page/quickstart.md
-- [ ] T046 [P] Add documentation for setup, env vars, and test commands in README.md
-- [ ] T047 Run full test suite and capture evidence in tests/integration/test-run-report.md
+- [X] T043 [P] Add responsive behavior and accessibility refinements in app/page.tsx
+- [X] T044 [P] Add final API contract fixture examples in tests/contract/fixtures/program-inquiry.examples.json
+- [X] T045 Run quickstart scenario validation and update run notes in specs/001-fullstackx-program-page/quickstart.md
+- [X] T046 [P] Add documentation for setup, env vars, and test commands in README.md
+- [X] T047 Run full test suite and capture evidence in tests/integration/test-run-report.md
 
 ---
 
